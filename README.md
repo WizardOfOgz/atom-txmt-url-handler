@@ -1,10 +1,10 @@
-# Atom Handler
+# Atom Txmt URL Handler
 
-A handler to open txmt:// URLs in Atom editor on OSX. Inspired by [subl](https://github.com/dhoulb/subl).
+A handler to open txmt:// URLs in Atom editor on OSX.
 
-Atom Handler registers itself to handler links with the `txmt://` protocol, similar to the protocol TextMate handles (txmt://) or the which can be used for Sublime Text (subl:// or sublime://). The protocol can then be used to open files in your Atom editor. Read on to learn how to use Atom Handler.
+This project is simply a clone of [Atom Handler](https://github.com/WizardOfOgz/atom-handler) with a change in the protocol which it handles (`txmt://` instead of `atm://`).
 
-Note: We would have liked to have used `atom://` as a protocol, but that is already taken and used for other purposes by Atom itself.
+Atom Txmt URL Handler registers itself to handler links with the `txmt://` protocol, similar to the protocol TextMate handles (txmt://). Instead of opening URLs which match that protocol in TextMate we open them in Atom.
 
 ## Prerequisites
 
@@ -12,13 +12,15 @@ Note: We would have liked to have used `atom://` as a protocol, but that is alre
 
 ## Installation
 
-- Download the latest release [(atom-handler.app.zip)](https://github.com/WizardOfOgz/atom-handler/releases/download/1.1.2/atom-handler.app.zip) and unzip it.
-- Move atom-handler.app into your `/Applications` directory.
+- Download the latest release [(atom-txmt-url-handler.app.zip)](https://github.com/WizardOfOgz/atom-txmt-url-handler/releases/download/1.0.0/atom-txmt-url-handler.app.zip) and unzip it.
+- Move atom-txmt-url-handler.app into your `/Applications` directory.
 - Open the application which will register the handler and exit immediately.
+
+Opening the application in the last step may be prevented by OS security. If that happens go to `System Preferences > Security & Privacy`. You should see a message about "atom-txmt-url-handler" being blocked. Click the button which says "Open Anyway".
 
 ## Usage
 
-Atom Handler will handle URLs which match the [TextMate URL scheme](http://blog.macromates.com/2007/the-textmate-url-scheme/) and take the following format:
+Atom Txmt URL Handler will handle URLs which match the [TextMate URL scheme](http://blog.macromates.com/2007/the-textmate-url-scheme/) and take the following format:
 
 `txmt://open?url=file://<file_path>[&line=<line>[&column=<column>]]`
 
@@ -70,4 +72,4 @@ xdebug.file_link_format="txmt://open?url=file://%f&line=%l"
 
 ## License
 
-Atom Handler is released under the [BSD 3-Clause license](https://github.com/WizardOfOgz/atom-handler/blob/master/LICENSE).
+Atom Txmt URL Handler is released under the [BSD 3-Clause license](https://github.com/WizardOfOgz/atom-txmt-url-handler/blob/master/LICENSE).
